@@ -1,0 +1,63 @@
+{
+  "name": "athread",
+  "version": "0.1.0",
+  "description": "A tiny lib to leverage worker_threads feature",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 10.5.0",
+    "npm": ">= 6.0.0"
+  },
+  "author": {
+    "email": "alansaraujo.schlindvein@gmail.com",
+    "name": "Alan Araujo",
+    "url": "https://github.com/alanschlindvein"
+  },
+  "scripts": {
+    "build": "npm run clean; node_modules/.bin/tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "pretest": "npm run lint",
+    "test:verbose": "node node_modules/.bin/jest --detectOpenHandles --verbose=true",
+    "test:coverage": "node node_modules/.bin/jest --coverage",
+    "test:watch": "node node_modules/.bin/jest --watchAll",
+    "lint": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ],
+    "transform": {
+      ".ts": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts?$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  }
+}
