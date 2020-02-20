@@ -16,7 +16,7 @@
     "url": "https://github.com/alanschlindvein"
   },
   "scripts": {
-    "build": "npm run clean; node_modules/.bin/tsc -p tsconfig.build.json",
+    "build": "npm run clean; node_modules/.bin/tsc",
     "clean": "rm -rf dist",
     "pretest": "npm run lint",
     "test:verbose": "node node_modules/.bin/jest --detectOpenHandles --verbose=true",
