@@ -2,20 +2,14 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
-    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "declaration": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "declaration": true,
-    "lib": ["es2017"],
-    "removeComments": true,
-    "noEmitHelpers": true,
-    "incremental": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "target": "es2016",
-    "typeRoots": ["node_modules/@types"],
     "outDir": "dist",
     "baseUrl": ".",
+    "lib": ["es2017"],
     "paths": {
       "~/*": ["src/*"]
     }
